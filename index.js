@@ -4,5 +4,8 @@ const port = process.env.PORT || 4000;
 
 const db = require("./db");
 const Image = require("./image/model");
+const imageRouter = require("./image/router");
 
 app.listen(port, () => console.log(`Listening on port ${port}!`));
+
+app.use(imageRouter);
